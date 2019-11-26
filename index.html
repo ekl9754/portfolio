@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>이소연 PORTFOLIO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+ <link href="https://fonts.googleapis.com/css?family=Lalezar|Rubik+Mono+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/fullpage.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/jquery.fullPage.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/wow.min.js"></script>
+ 
+    
+    <script>
+       $(function($){
+			$("#fullpage").fullpage({
+                
+				anchors:["1st","2st","3st","4st"],
+				menu:"#topMenu",
+					'afterLoad':function(anchorsLink,index){
+                        if(index==1){
+                            new WOW().init();
+                        $("header>#navTop>h1>a>img").attr("src","images/logo.png");
+                        $("header>#navTop").css({"background":"none", "box-shadow":"none"});
+                            
+                             
+                        }else{
+                             new WOW().init(); $("header>#navTop").css({"transition":"0.5s","background":"white","box-shadow":"0 1px 10px rgba(0,0,0,0.2)",});
+                        }
+                        
+						if(index==2){ 
+                            wow = new WOW({
+                                offset : -800,
+                            });
+                            wow.init();
+							$(".onview").addClass("mactive");
+                           
+						}else{              
+							$(".onview").removeClass("mactive");
+
+						};
+                        if(index==3){
+                            $(".main_cmt3>#progress").load("progresscircle.html");
+                              
+                        }
+						if(index==4){
+                            wow = new WOW({
+                                offset : -4000,
+                            });
+                            wow.init();
+                        }
+					}
+			});
+            
+          
+		});
+
+    </script>
+    
+    <style>
+      
+        @media all and (min-width:740px) and (max-width:1023px){ 
+           
+        }
+        @media all and (max-width:1525px){ 
+            .main_cmt2{width: 85%;}
+        }
+        @media all and (max-width:1217px){ 
+            .main_cmt2{width: 84%; height: auto;}
+            .main_cmt2>.pro-left{float: none; border-right: 0; width: 100%; margin-left: 9%;}
+            .main_cmt2>.pro-left>ul{margin-top: 0; font-size: 17px; line-height: 36px; padding-top: 3%; margin-left: 33%;}
+            .main_cmt2>.pro-right{float: none; margin-left: 4%; width: 100%;}
+            .main_cmt2>.pro-right>p{font-size: 17px; line-height: 29px;}
+            .circlechart{width: 48.33% !important;}
+            .main_cmt4>.main-portfolio{width: 100%;}
+            .main_cmt4>.main-portfolio>.sub1-portfolio{margin-left: 12%;}
+            .main_cmt4>.main-portfolio>.sub2-portfolio{margin-left: 12%;}
+        }
+       @media all and (max-width:850px){
+           .main_cmt4{height: 735px;}
+           .main_cmt4>.main-portfolio{top: 60%;}
+           .main_cmt4>.main-portfolio>.sub1-portfolio{height: 0;}
+           .ment-color{width: 45px; font-size: 15px;}
+           .port1-ment>p.pub{margin-left: 5px; font-size: 15px;}
+           .port1-ment>.name{font-size: 18px;}
+        }
+       @media all and (max-width:739px){ 
+           #navTop>h1{width: 165px; left: 3%;}
+           #navTop>ul{width: 55%; right: 7%; font-size: 16px;}
+           #page1{background-position: left;}
+           .main_cmt p:nth-child(1){font-size: 75px;}
+           .main_cmt p:nth-child(2){font-size: 35px;}
+           .main_cmt p:nth-child(3){font-size: 20px;}
+           .main_cmt2>.pro-left{margin-left: 0;}
+           .main_cmt2>.pro-left>ul{margin-left: 55%; line-height: 33px;}
+           .main_cmt2>.pro-left>ul>li:nth-child(1){font-size: 24px;}
+           .main_cmt2>.pro-right{margin-left: 0;}
+           .main_cmt3{width: 90%;}
+        }
+        
+        @media all and (max-width:450px){ 
+            #page1{background-position: left;}
+            #topMenu{display: none;}
+            #navTop{height: 60px; position: absolute;}
+            #navTop>h1{width: 120px; left: 37%;}
+            #navTop>ul{width: 100%; left: -11px; right: 0; margin-left: 0; top: 50%;}
+            .main_cmt{top: 55%; padding: 80px 144px;}
+            .main_cmt p:nth-child(1){font-size: 64px;}
+            .main_cmt p:nth-child(2){font-size: 37px;}
+            .main_cmt p:nth-child(3){font-size: 18px;}
+            .main_cmt2>.onview>p{font-size: 27px;}
+            .main_cmt2>.pro-left{margin-top: 25px; height: auto;}
+            .main_cmt2>.pro-left>.img{position: absolute; width: 35%; left: 55%; top: 30%;}
+            .main_cmt2>.pro-left>ul{margin-left: 0; line-height: 30px; font-size: 16px;}
+            .main_cmt2>.pro-left>ul>li:nth-child(1){font-size: 23px;}
+            .main_cmt2>.pro-right{margin-top: 20px;}
+            .main_cmt2>.pro-right>ul{margin-left: 0;}
+            .main_cmt2>.pro-right>p{margin-left: 0; font-size: 14px; line-height: 25px;}
+            .main_cmt2>.pro-right>ul>li:nth-child(1){font-size: 23px;}
+            .main_cmt3>.onview>p{font-size: 27px;}
+            .circlechart{padding: 0 !important; width: 50% !important;}
+            .circle-chart{width: 140px !important; height: 180px !important;}
+            .main_cmt4{height: 745px;}
+            .main_cmt4>.onview>p{font-size: 27px;}
+            .main_cmt4>.main-portfolio{left: 41%;}
+            .portfolio-1{width: 42%;}
+            .portfolio-2{width: 42%;}
+            .portfolio-3{width: 42%;}
+            .portfolio-4{width: 42%;}
+            .ment-color{display: block; margin-bottom: 5px; width: 41px; height: 25px; line-height: 25px; font-size: 14px;}
+            .port1-ment>p.pub{font-size: 14px;}
+            .port1-ment>.name{font-size: 16px;}
+            
+        }
+    </style>
+     
+</head>
+<body>
+    
+ <div id="wrap">
+
+    <header>
+        <nav id="navTop" style="z-index: 9">
+               <h1><a href="https://ekl9754.github.io/soyeon/portfolio"><img src="images/logo.png" alt="로고이미지"></a></h1>
+            <ul id="topMenu">
+                <li data-menuanchor="1st"><a href="#1st" class="t_line">HOME</a></li>
+                <li data-menuanchor="2st"><a href="#2st" class="t_line">PROFILE</a></li>
+                <li data-menuanchor="3st"><a href="#3st" class="t_line">SKILL</a></li>
+                <li data-menuanchor="4st"><a href="#4st" class="t_line">PORTFOLIO</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div id="fullpage">
+        <div class="section pages" id="page1" data-anchor="1st">
+            <div class="main_cmt wow fadeIn">
+                <div class="wow slideInUp">
+                    <p>Web Publisher</p>
+                    <p>LEE SO YEON</p>
+                    <p>SENSITIVE, CREATIVE, IMAGINATIVE</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="section pages" id="page2" data-anchor="2st">
+            <div class="main_cmt2">
+                <div class="onview">
+                    <p>PROFILE</p>
+                </div>
+                
+                <div class="pro-left wow fadeInLeft">
+                  <div class="img">
+                      <img src="images/profile.jpg" alt="프로필이미지">
+                  </div>
+                   <ul>
+                       <li style="font-family:'NanumSquareEB'">Web Publisher &amp; Web Designer</li>
+                       <li>이소연</li>
+                       <li>1997.11.12</li>
+                       <li>서울특별시 구로구</li>
+                       <li>010-2209-9754</li>
+                       <li>ekl9763@naver.com</li>
+                   </ul>
+                </div>
+                
+                <div class="pro-right wow fadeInRight">
+                    <ul>
+                        <li style="font-family:'NanumSquareEB'">I AM</li>
+                   </ul>
+                   <p> 안녕하세요 이소연입니다. 저의 사이트에 방문해주셔서 감사합니다.<br>
+                   끊임없이 도전하며, 긍정적인 마인드로 살아가면서 트렌디한 웹 퍼블리셔로 나아가는것이 저의 목표입니다.<br><br>
+                   감각적인 디자인으로 웹 접근성을 준수하며, 보다 많은 분들을 만족시키기 위해서<br>
+                   적극적으로 배우는 자세로 임하고 있습니다.<br>
+                   최고의 퍼블리셔가 되기 위해서 노력하겠습니다. 
+                   </p>
+                </div>
+            </div>
+        </div>
+        <div class="section pages" id="page3" data-anchor="3st">
+               <div class="main_cmt3">
+                   <div class="onview">
+                        <p>SKILL</p>
+                    </div>
+                    
+                    <div id="progress"></div>
+               </div>
+        </div>
+        <div class="section pages" id="page4" data-anchor="4st">
+                <div class="main_cmt4">
+                   <div class="onview">
+                        <p>PORTFOLIO</p>
+                    </div>
+                    
+                    <div class="main-portfolio">
+                        <div class="sub1-portfolio" >
+                            <div class="portfolio-1 wow fadeInUp">
+                                <a target="_blank" href="https://ekl9754.github.io/cong"><img src="images/portfolio-1.png" alt="콩카페 포트폴리오"></a>
+                                <div class="port1-ment">
+                                    <div class="ment-color">구현</div>
+                                    <p class="pub">웹 표준, 웹 접근성, 반응형 웹</p>
+                                    <div class="name"><span>01</span>&nbsp;&nbsp;CONG CAFE</div>
+                                </div>
+                            </div>
+                            
+                            <div class="portfolio-2 wow fadeInUp">
+                                <a href="#1"><img src="images/portfolio-2.png" alt="크리스피크림도넛 포트폴리오"></a>
+                                <div class="port1-ment">
+                                    <div class="ment-color">구현</div>
+                                    <p class="pub">웹 표준, 웹 접근성, 모바일</p>
+                                    <div class="name"><span>02</span>&nbsp;&nbsp;크리스피 크림 도넛 리뉴얼</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="sub2-portfolio">
+                            <div class="portfolio-3 wow fadeInUp">
+                                <a target="_blank" href="https://hgh0328.github.io/RITZHOTEL"><img src="images/portfolio-3.png" alt="RITZ HOTEL 포트폴리오"></a>
+                                <div class="port1-ment">
+                                    <div class="ment-color team">팀</div>
+                                    <p class="pub">웹 표준, 웹 접근성, 반응형 웹</p>
+                                    <div class="name"><span class="ano">03</span>&nbsp;&nbsp;RITZ HOTEL</div>
+                                </div>
+                            </div>
+                            
+                            <div class="portfolio-4 wow fadeInUp">
+                                <a target="_blank" href="https://ekl9754.github.io/buildup"><img src="images/portfolio-4.png" alt="RITZ HOTEL 포트폴리오"></a>
+                                <div class="port1-ment">
+                                    <div class="ment-color">구현</div>
+                                    <p class="pub">웹 표준, 웹 접근성, 반응형 웹</p>
+                                    <div class="name"><span>04</span>&nbsp;&nbsp;BUILD UP</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+    </div>
+    </div>
+ </div>
+    
+</body>
+</html>
